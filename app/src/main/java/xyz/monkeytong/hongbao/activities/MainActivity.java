@@ -5,26 +5,25 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.accessibility.AccessibilityManager;
-import android.widget.*;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.List;
 
 import xyz.monkeytong.hongbao.R;
-import xyz.monkeytong.hongbao.fragments.GeneralSettingsFragment;
 import xyz.monkeytong.hongbao.utils.ConnectivityUtil;
 import xyz.monkeytong.hongbao.utils.UpdateTask;
-
-import com.tencent.bugly.crashreport.CrashReport;
 
 
 public class MainActivity extends Activity implements AccessibilityManager.AccessibilityStateChangeListener {
@@ -63,16 +62,13 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void handleMaterialStatusBar() {
         // Not supported in APK level lower than 21
-        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return;
+        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            return;
 
         Window window = this.getWindow();
-
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
         window.setStatusBarColor(0xffE46C62);
-
     }
 
     @Override
