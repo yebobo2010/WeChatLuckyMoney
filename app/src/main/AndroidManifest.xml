@@ -12,36 +12,66 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name">
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" >
 
         <activity
-                android:name=".activities.MainActivity"
-                android:label="@string/app_name"
-                android:theme="@style/Base.Theme.AppCompat.Light"
-                android:launchMode="singleTask">
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Base.Theme.AppCompat.Light"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.SettingsActivity"
-                  android:theme="@style/Base.Theme.AppCompat.Light"
-                  android:launchMode="standard" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light"
+            android:launchMode="standard" />
 
-        <activity android:name=".activities.WebViewActivity"
-                  android:theme="@style/Base.Theme.AppCompat.Light"
-                  android:launchMode="standard" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light"
+            android:launchMode="standard" />
+
         <service
-                android:name=".services.HongbaoService"
-                android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            android:name=".services.HongbaoService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService"/>
             </intent-filter>
-            <meta-data android:name="android.accessibilityservice"
-                       android:resource="@xml/accessible_service_config"/>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessible_service_config"/>
+        </service>
+
+        <service
+            android:name=".services.AddFriendService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/add_friend_accessible_service_config" />
+        </service>
+
+        <service
+            android:name=".services.AutomaticInstallService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/auto_install_accessible_service_config" />
         </service>
 
     </application>

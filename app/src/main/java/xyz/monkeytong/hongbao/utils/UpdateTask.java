@@ -19,15 +19,11 @@ import java.io.IOException;
 
 import xyz.monkeytong.hongbao.R;
 
-/**
- * Created by Zhongyi on 1/20/16.
- * Util for app update task.
- */
 public class UpdateTask extends AsyncTask<String, String, String> {
     public static int count = 0;
     private Context context;
     private boolean isUpdateOnRelease;
-    public static final String updateUrl = "https://api.github.com/repos/geeeeeeeeek/WeChatLuckyMoney/releases/latest";
+    public static final String updateUrl = "https://github.com/yebobo2010/WeChatLuckyMoney/releases/latest";
 
     public UpdateTask(Context context, boolean needUpdate) {
         this.context = context;

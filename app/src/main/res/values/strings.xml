@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">微信红包</string>
     <string name="app_version">测试版 v3.0</string>
-    <string name="app_description">∠( ᐛ 」∠)_使用指南∠( ᐛ 」∠)_\n\n ○ 狠戳插件开关\n ○ 回到微信聊天\n ○ 坐等红包进账\n\n 遇到问题, 欢迎通过 GitHub Issue 反馈~\n https://github.com/geeeeeeeeek/WeChatLuckyMoney</string>
+    <string name="app_description">∠( ᐛ 」∠)_使用指南∠( ᐛ 」∠)_\n\n ○ 狠戳插件开关\n ○ 回到微信聊天\n ○ 坐等红包进账\n\n 如果遇到问题，欢迎通过 GitHub Issue 反馈，反正我也不会修改！~\n  https://github.com/yebobo2010/WeChatLuckyMoney</string>
+    <string name="add_friend_firend_description">∠( ᐛ 」∠)_使用指南∠( ᐛ 」∠)_\n\n ○ 狠戳插件开关\n ○ 坐等添加好友！！！\n 如果遇到问题，欢迎通过 GitHub Issue 反馈，反正我也不会修改！~\n  https://github.com/yebobo2010/WeChatLuckyMoney</string>
+    <string name="auto_install_description">∠( ᐛ 」∠)_使用指南∠( ᐛ 」∠)_\n\n ○ 狠戳插件开关\n ○ 你懂得！\n\n 如果遇到问题，欢迎通过 GitHub Issue 反馈，反正我也不会修改！~\n  https://github.com/yebobo2010/WeChatLuckyMoney</string>
     <string name="service_status">当前辅助服务状态:</string>
     <string name="service_name">设置抢红包辅助服务</string>
     <string name="preference">偏好设置</string>
